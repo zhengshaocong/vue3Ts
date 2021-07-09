@@ -1,0 +1,86 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-06-07 10:28:50
+ * @LastEditTime: 2021-06-07 14:18:26
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue3_ts\src_20_手写组合API\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./index.js"></script>
+    <script>
+        const proxyUser1=shallowReactive({
+            name:'小明',
+            car:{
+                color:'red'
+            }
+        })
+        // proxyUser1.name='小红'
+        // proxyUser1.car.color
+        // delete proxyUser1.car.color
+
+//==========================================
+
+
+        // const proxyUser2=reactive({
+        //     name:'小明',
+        //     car:{
+        //         color:'red'
+        //     }
+        // })
+        // // proxyUser2.car.color+=1
+        // delete delete proxyUser2.car.color
+
+
+//==========================================
+
+
+        // const proxyUser3=shallowReadonly({
+        //     name:'小明',
+        //     car:[111,222]
+        // })
+        // // proxyUser3.name=1
+        // delete proxyUser3.car[0]
+        // console.log(proxyUser3)
+
+
+
+//==========================================
+
+
+        // const proxyUser4=readonly({
+        //     name:'小明',
+        //     car:{
+        //         color:'red'
+        //     }
+        // })
+        // // proxyUser3.name=1
+        // delete proxyUser4.car.color
+        // console.log(proxyUser4)
+
+
+//==========================================
+
+
+        const proxyUser5=ref({
+            name:'小明',
+            car:{
+                color:'red'
+            }
+        })
+
+        const proxyUser6=ref(5)
+        // proxyUser3.name=1
+        proxyUser5.value.name
+        proxyUser6.value
+    </script>
+</body>
+</html>

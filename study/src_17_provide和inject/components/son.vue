@@ -1,17 +1,18 @@
 <template>
-  <TodoList></TodoList>
+  <div>儿子</div>
+  <grentSon></grentSon>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TodoList from "./components/TodoList/index.vue";
+import grentSon from "./grentSon.vue";
 export default defineComponent({
   name: "",
   setup() {
     return {};
   },
   components: {
-    TodoList,
+    grentSon,
   },
 });
 </script>
